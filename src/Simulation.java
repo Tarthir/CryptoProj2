@@ -30,7 +30,7 @@ public class Simulation {
          if(Math.random() < p_malicious)
             // When you are ready to try testing with malicious nodes, replace the
             // instantiation below with an instantiation of a MaliciousNode
-            nodes[i] = new MalDoNothing(p_graph, p_malicious, p_txDistribution, numRounds);
+            nodes[i] = new MaliciousNode(p_graph, p_malicious, p_txDistribution, numRounds);
          else
             nodes[i] = new CompliantNode(p_graph, p_malicious, p_txDistribution, numRounds);
       }
@@ -98,7 +98,7 @@ public class Simulation {
                   }
                   
                   Candidate candidate = new Candidate(tx, i);
-                  allProposals.get(j).add(candidate);
+                  allProposals.get(j).add(candidate); //followee node j gives node i a set of proposed transactions
                }
 
             }

@@ -6,4 +6,5 @@ public class Candidate {
 		this.tx = tx;
 		this.sender = sender;
 	}
+
 }
