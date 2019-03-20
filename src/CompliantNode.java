@@ -45,7 +45,7 @@ public class CompliantNode implements Node {
             else{
                 List<Transaction> ls_tx = new LinkedList<>();
                 ls_tx.add(c.tx);
-                senders_to_trans.put(c.sender,ls_tx)
+                senders_to_trans.put(c.sender,ls_tx);
             }
         }
         return ;
