@@ -32,13 +32,15 @@ public class CompliantNode implements Node {
     }
 
     public Set<Transaction> sendToFollowers() {
+        // TODO return transactions depending
         return pending;
     }
 
     public void receiveFromFollowees(Set<Candidate> candidates) {
         //add candidates that come in to a list of "pending" candidates
-        //this.pending_candidates.addAll(candidates);
-        for (Candidate c : candidates) {
+        this.pending_candidates.addAll(candidates);
+        // TODO turn candidates into transactions to be sent to followers depending
+        /*for (Candidate c : candidates) {
             if (senders_to_trans.containsKey(c.sender)) {
                 senders_to_trans.get(c.sender).add(c.tx);
             }
@@ -46,8 +48,8 @@ public class CompliantNode implements Node {
                 List<Transaction> ls_tx = new LinkedList<>();
                 ls_tx.add(c.tx);
                 senders_to_trans.put(c.sender,ls_tx);
-            }
-        }
-        return ;
+            }*/
+        //}
+        return;
     }
 }
